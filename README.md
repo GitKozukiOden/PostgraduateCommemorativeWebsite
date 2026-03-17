@@ -1,86 +1,41 @@
-# 研究生纪念网（GitHub Pages 版）
+# 研究生纪念网
 
-根据需求生成的静态网站版本，包含：
+这里是一个面向公众的缅怀页面。
 
-- 首页三列卡片展示（照片 + 名字）
-- 点击进入详情页
-- 维护者通过仓库数据文件添加人物
-- 访客评论区（Giscus / GitHub Discussions）
+我们希望用真实、克制、尊重的方式，记录那些离开的研究生，记住他们的名字、努力与人生片段。  
+每一位被展示的人，都不应只被一个结局定义。
 
-## 目录结构
+## 建站初衷
 
-```text
-.
-├─ index.html
-├─ detail.html
-├─ styles.css
-├─ js/
-│  ├─ main.js
-│  └─ detail.js
-├─ data/
-│  └─ students.json
-└─ assets/photos/
-   ├─ memory-1.svg
-   ├─ memory-2.svg
-   └─ memory-3.svg
-```
+在学业、就业、经济、家庭与社会压力交织的现实里，很多研究生承受着外界难以看见的负担。  
+这个页面的存在，是为了纪念，也是为了提醒：
 
-## 如何添加人物（仅维护者可添加）
+- 研究生不是统计数字
+- 每一次沉默都值得被倾听
+- 每一个名字都值得被认真对待
 
-1. 把照片放到 `assets/photos/`。
-2. 编辑 `data/students.json`，在 `students` 数组新增对象：
+## 我们希望留下的内容
 
-```json
-{
-  "id": "unique-id",
-  "name": "姓名",
-  "birthYear": 1998,
-  "leaveYear": 2024,
-  "summary": "首页简述",
-  "photo": "assets/photos/your-photo.jpg",
-  "story": ["段落1", "段落2", "段落3"]
-}
-```
+- 个人姓名与照片
+- 生平与学习经历的简要介绍
+- 同学、朋友、访客的缅怀留言
 
-只要仓库只有你有写权限，就满足“只有你可以添加人物”。
+## 留言倡议
 
-## 评论区（任何人可评论）
+欢迎留言，但请共同维护基本边界：
 
-项目已预留 Giscus 接入逻辑，修改 `js/detail.js` 里的 `giscusConfig`：
+- 保持尊重，不攻击、不嘲讽
+- 不传播未经核实的隐私与细节
+- 不消费他人的伤痛，不将悲剧娱乐化
 
-- `repo`
-- `repoId`
-- `categoryId`
+## 关于维护
 
-获取方式：
+人物资料由站点维护者统一整理后发布。  
+评论区向公众开放，便于更多人表达纪念与关怀。
 
-1. 在仓库开启 **Discussions**。
-2. 打开 [Giscus 官网](https://giscus.app/zh-CN) 生成配置参数。
-3. 将参数填入 `js/detail.js`。
+## 写在最后
 
-## 部署到 GitHub Pages
+愿逝者安息。  
+愿仍在路上的人，被看见，被理解，被善待。
 
-1. 推送项目到 GitHub 仓库。
-2. 进入仓库 `Settings -> Pages`。
-3. Source 选择 `Deploy from a branch`。
-4. Branch 选择 `main` 和 `/root`。
-5. 保存后等待发布完成。
-
-## 是否需要云数据库
-
-当前版本不需要自建云数据库：
-
-- 人物资料在仓库 `data/students.json`
-- 评论存储在 GitHub Discussions（由 Giscus 承载）
-
-如果后续要做网页后台新增、匿名评论、评论审核等，再接入 Supabase/Firebase。
-
-## 本地预览
-
-不要直接双击 HTML 打开（`file://` 下 `fetch` 会失败），建议启动本地静态服务：
-
-```bash
-python -m http.server 5500
-```
-
-然后访问 [http://localhost:5500](http://localhost:5500)。
+如果你或你身边的人正处在明显的心理危机中，请优先联系当地紧急救助渠道、学校心理中心或可信任的亲友，尽快获得现实支持。
