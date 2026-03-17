@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>人物详情 | 研究生纪念网</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="detail-header">
+      <a href="index.html" class="back-link">返回首页</a>
+      <h1>人物详情</h1>
+    </header>
+
+    <main class="detail-main">
+      <article id="detailCard" class="detail-card" hidden>
+        <img id="detailImage" class="detail-image" alt="" />
+
+        <section class="detail-meta">
+          <h2 id="detailName"></h2>
+          <p id="detailYears" class="detail-years"></p>
+          <p id="detailSummary" class="detail-summary"></p>
+        </section>
+
+        <section class="detail-story">
+          <h3>人物介绍</h3>
+          <div id="detailStory"></div>
+        </section>
+      </article>
+
+      <p id="detailState" class="loading-state">正在加载详情...</p>
+
+      <section class="comments-wrap">
+        <h3>评论区</h3>
+        <p class="comments-hint">
+          推荐使用 Giscus（基于 GitHub Discussions）启用评论，任何拥有 GitHub 账号的人均可留言。
+        </p>
+        <div id="giscusContainer"></div>
+      </section>
+    </main>
+
+    <script src="js/detail.js" defer></script>
+  </body>
+</html>
