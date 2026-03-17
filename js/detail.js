@@ -31,10 +31,10 @@ function renderStory(storyList) {
 
 function injectGiscus(term) {
   const giscusConfig = {
-    repo: "YOUR_GITHUB_USERNAME/YOUR_REPO",
-    repoId: "YOUR_REPO_ID",
-    category: "General",
-    categoryId: "YOUR_CATEGORY_ID",
+    repo: "GitKozukiOden/PostgraduateCommemorativeWebsite",
+    repoId: "R_kgDORpbDDA",
+    category: "Announcements",
+    categoryId: "DIC_kwDORpbDDM4C4mNW",
     mapping: "specific",
     term,
     reactionsEnabled: "1",
