@@ -95,7 +95,9 @@ async function render() {
     detailImage.src = student.photo;
     detailImage.alt = `${student.name} 的纪念照片`;
     detailName.textContent = student.name;
-    detailYears.textContent = `${student.birthYear || "?"} - ${student.leaveYear || "?"}`;
+    const birthDisplay = student.birthDate || student.birthYear || "?";
+    const leaveDisplay = student.leaveDate || student.leaveYear || "?";
+    detailYears.textContent = `${birthDisplay} - ${leaveDisplay}`;
     detailSummary.textContent = student.summary || "";
     renderStory(student.story || []);
 
