@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 研究生纪念网（GitHub Pages 版）
 
 根据你的需求生成的静态网站版本，包含：
@@ -6,6 +7,9 @@
 - 点击进入详情页
 - 维护者通过仓库数据文件添加人物
 - 访客评论区（Giscus / GitHub Discussions）
+=======
+# 研究生纪念网
+>>>>>>> 6a1d421880749bbbfe3cf33c0cee671756ac422f
 
 ## 目录结构
 
@@ -24,6 +28,7 @@
    ├─ memory-2.svg
    └─ memory-3.svg
 ```
+<<<<<<< HEAD
 
 ## 如何添加人物（仅你可添加）
 
@@ -90,3 +95,5 @@ python -m http.server 5500
 ```
 
 然后访问 [http://localhost:5500](http://localhost:5500)。
+=======
+>>>>>>> 6a1d421880749bbbfe3cf33c0cee671756ac422f
