@@ -22,8 +22,44 @@
         </p>
       </section>
 
+      <section class="search-panel" aria-label="搜索人物与经历">
+        <label class="search-label" for="searchInput">搜索人名或经历关键词</label>
+        <div class="search-controls">
+          <input
+            id="searchInput"
+            class="search-input"
+            type="search"
+            placeholder="例如：孙馨钰 / 临床压力"
+          />
+          <button id="searchButton" class="search-button" type="button">搜索</button>
+          <button
+            id="resetSearchButton"
+            class="search-button search-return-button"
+            type="button"
+            hidden
+          >
+            返回主界面
+          </button>
+        </div>
+        <p id="searchState" class="search-state" aria-live="polite"></p>
+      </section>
+
       <section id="masonry" class="masonry" aria-live="polite"></section>
       <p id="loadingState" class="loading-state">正在加载人物资料...</p>
+
+      <section class="support-panel" aria-labelledby="supportTitle">
+        <h2 id="supportTitle">支持这个纪念站</h2>
+        <p class="support-text">如果你愿意支持网站维护，可以通过爱发电赞助。</p>
+        <a
+          class="support-link"
+          href="https://ifdian.net/a/kozukioden"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          前往爱发电支持
+        </a>
+        <p class="support-note">感谢你的支持与转发。</p>
+      </section>
     </main>
 
     <footer class="site-footer">
